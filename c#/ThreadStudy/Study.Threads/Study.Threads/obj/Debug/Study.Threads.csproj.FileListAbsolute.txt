@@ -1,0 +1,7 @@
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.Threads\bin\Debug\Study.Threads.exe.config
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.Threads\bin\Debug\Study.Threads.exe
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.Threads\bin\Debug\Study.Threads.pdb
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.Threads\obj\Debug\Study.Threads.csproj.CoreCompileInputs.cache
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.Threads\obj\Debug\Study.Threads.exe
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.Threads\obj\Debug\Study.Threads.pdb
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.Threads\obj\Debug\Study.Threads.csprojResolveAssemblyReference.cache

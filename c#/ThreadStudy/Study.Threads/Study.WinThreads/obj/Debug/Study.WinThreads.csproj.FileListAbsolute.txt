@@ -1,0 +1,10 @@
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.WinThreads\bin\Debug\Study.WinThreads.exe.config
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.WinThreads\bin\Debug\Study.WinThreads.exe
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.WinThreads\bin\Debug\Study.WinThreads.pdb
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.WinThreads\obj\Debug\Study.WinThreads.csprojResolveAssemblyReference.cache
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.WinThreads\obj\Debug\Study.WinThreads.Form1.resources
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.WinThreads\obj\Debug\Study.WinThreads.Properties.Resources.resources
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.WinThreads\obj\Debug\Study.WinThreads.csproj.GenerateResource.Cache
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.WinThreads\obj\Debug\Study.WinThreads.csproj.CoreCompileInputs.cache
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.WinThreads\obj\Debug\Study.WinThreads.exe
+D:\workspace\projects\c#\ThreadStudy\Study.Threads\Study.WinThreads\obj\Debug\Study.WinThreads.pdb
