@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -16,12 +17,30 @@ namespace Study.Threads
             {
                 new Thread(Run1).Start();
             }
+
+            var tasks = new Task[5];
+
             for (int i = 0; i < 5; i++)
             {
-                Task.Run(() => { Run2(); });
+
+                tasks[i] = Task.Run(() =>
+                {
+                    try
+                    {
+                        Run2();
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("catch Run2 exception. i:{0}", i);
+                    }
+                });
             }
 
+            Task.WaitAll(tasks);
+
             Console.ReadLine();
+
+            //IsBackgroundTest();
         }
         static void Run1()
         {
@@ -29,7 +48,15 @@ namespace Study.Threads
         }
         static void Run2()
         {
-            Console.WriteLine("Task调用的Thread Id =" + Thread.CurrentThread.ManagedThreadId);
+            try
+            {
+                Console.WriteLine("Task调用的Thread Id =" + Thread.CurrentThread.ManagedThreadId);
+                throw new Exception("Run2 发生异常!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Catch In Delegate");
+            }
         }
 
 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Study.Threads
+namespace Study.Threads.Sync
 {
     /// <summary>
     /// 信号量测试

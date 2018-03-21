@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -9,43 +10,28 @@ namespace Study.Threads
 {
     class ThreadProgram
     {
-        //全局变量
-        private static int _result;
-
-        //Main方法
         static void Main(string[] args)
         {
-            ManualResetEventSlim a = new ManualResetEventSlim(false);
-            //运行后按住Enter键数秒，对比使用Interlocked.Increment(ref _result);与 _result++;的不同
-            while (true)
-            {
-                Task[] _tasks = new Task[100];
-                int i = 0;
+            var thread1 = new Thread(NoArgMethod);
+            thread1.Start();
 
-                for (i = 0; i < _tasks.Length; i++)
-                {
-                    _tasks[i] = Task.Factory.StartNew(num =>
-                    {
-                        var taskid = (int)num;
-                        Work(taskid);
-                    }, i);
-                }
+            var thread2 = new Thread(ArgMethod);
+            thread2.Start("luxiang");
 
-                Task.WaitAll(_tasks);
-                Console.WriteLine(_result);
+            var thread3 = new Thread(() => Console.WriteLine("hello, thread3, current threadId:{0}", Thread.CurrentThread.ManagedThreadId));
+            thread3.Start();
 
-                Console.ReadKey();
-            }
+            Console.ReadLine();
         }
 
-        //线程调用方法
-        private static void Work(int TaskID)
+        static void NoArgMethod()
         {
-            for (int i = 0; i < 10; i++)
-            {
-                //_result++;
-                Interlocked.Increment(ref _result);
-            }
+            Console.WriteLine("hello, thread1, current threadId:{0}", Thread.CurrentThread.ManagedThreadId);
+        }
+
+        static void ArgMethod(object n)
+        {
+            Console.WriteLine("hello, thread2, current threadId:{0}, arg:{1}", Thread.CurrentThread.ManagedThreadId, n.ToString());
         }
     }
 }
