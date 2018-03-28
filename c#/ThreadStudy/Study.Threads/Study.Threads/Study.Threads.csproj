@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Study.Threads.Sync.MonitorProgram</StartupObject>
+    <StartupObject>Study.Threads.Sync.MutexProgram</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,10 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Sync\InterlockedProgram.cs" />
+    <Compile Include="Sync\LockProgram.cs" />
+    <Compile Include="Sync\AutoResetEventProgram.cs" />
+    <Compile Include="Sync\ManualResetEventSlimProgram.cs" />
     <Compile Include="Sync\MonitorProgram.cs" />
     <Compile Include="Sync\MutexProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sync\ReadWriteLockProgram.cs" />
     <Compile Include="Sync\SemaphoreProgram.cs" />
     <Compile Include="TaskProgram.cs" />
     <Compile Include="ThreadProgram.cs" />

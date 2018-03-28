@@ -31,11 +31,41 @@ namespace Study.WinThreads
         /// <param name="e"></param>
         private void btnStart_Click(object sender, EventArgs e)
         {
-            pBarThread = new Thread(new ThreadStart(this.ExepBarShow)); //创建进度条线程
-            showNumThread = new Thread(new ThreadStart(this.ExeShowNum));   //创建显示文本框中的文字线程
-                                                                            //开始两个已创建的线程
-            this.StartThread(showNumThread);
-            this.StartThread(pBarThread);
+            //pBarThread = new Thread(new ThreadStart(this.ExepBarShow)); //创建进度条线程
+            //showNumThread = new Thread(new ThreadStart(this.ExeShowNum));   //创建显示文本框中的文字线程
+            //                                                                //开始两个已创建的线程
+            //this.StartThread(showNumThread);
+            //this.StartThread(pBarThread);
+
+            new Thread(Increment).Start();
+        }
+
+        private int count = 0;
+
+        private delegate void DlgRefreshView();
+        
+
+        private void Increment()
+        {
+            try
+            {
+                while (true)
+                {
+                    count++;
+                    Thread.Sleep(100);
+
+                    this.Invoke(new DlgRefreshView(RefreshView));
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("发生异常");
+            }
+        }
+
+        private void RefreshView()
+        {
+            this.txtNum.Text = count.ToString();
         }
 
         /// <summary>

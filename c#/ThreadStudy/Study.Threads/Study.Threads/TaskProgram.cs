@@ -36,6 +36,7 @@ namespace Study.Threads
                 });
             }
 
+
             Task.WaitAll(tasks);
 
             Console.ReadLine();
