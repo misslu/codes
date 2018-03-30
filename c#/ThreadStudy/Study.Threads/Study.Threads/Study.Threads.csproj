@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Study.Threads.Sync.MutexProgram</StartupObject>
+    <StartupObject>Study.Threads.ExceptionProc.ParallelExceptionProgram</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,6 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cancel\TaskCancelProgram.cs" />
+    <Compile Include="ExceptionProc\ParallelExceptionProgram.cs" />
+    <Compile Include="ExceptionProc\TaskExceptionProgram.cs" />
+    <Compile Include="Multi\ParallelProgram.cs" />
+    <Compile Include="Multi\ThreadPoolProgram.cs" />
     <Compile Include="Sync\InterlockedProgram.cs" />
     <Compile Include="Sync\LockProgram.cs" />
     <Compile Include="Sync\AutoResetEventProgram.cs" />
@@ -55,8 +60,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sync\ReadWriteLockProgram.cs" />
     <Compile Include="Sync\SemaphoreProgram.cs" />
-    <Compile Include="TaskProgram.cs" />
-    <Compile Include="ThreadProgram.cs" />
+    <Compile Include="Multi\TaskProgram.cs" />
+    <Compile Include="Multi\ThreadProgram.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
